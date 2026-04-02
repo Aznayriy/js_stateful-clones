@@ -29,6 +29,10 @@ function transformStateWithClones(state, actions) {
           delete newState[key];
         }
         break;
+
+      default:
+        newState = currentState;
+        break;
     }
 
     history.push(newState);
